@@ -1,0 +1,256 @@
+[2026-05-27 18:04:57] Loading parquet: data/final_nyc_2015_2024/nyc_2015_2024_selected_features_hourly_aggregated_wide.parquet
+[2026-05-27 18:04:57] Prepared rows: 52,608, range: 2019-01-01 00:00:00 -> 2024-12-31 23:00:00
+[2026-05-27 18:04:57] Planned model runs: 66
+[2026-05-27 18:04:57] === Horizon 1h: building features ===
+[2026-05-27 18:04:58] H=1: train rows=36,190, valid rows=4,075, test rows=7,878, features=16
+[2026-05-27 18:04:58] [1/66] ridge_lag done in 0.04s
+[2026-05-27 18:05:06] [2/66] rf_stable done in 8.05s params={"n_estimators": 800, "max_depth": 18, "min_samples_leaf": 2, "max_features": "sqrt", "n_jobs": -1, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000374 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36190, number of used features: 16
+[LightGBM] [Info] Start training from score 8.241793
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000271 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36190, number of used features: 16
+[LightGBM] [Info] Start training from score 8.241793
+[2026-05-27 18:05:07] [3/66] lgbm_small done in 1.90s (no early stopping, best_iter_from_curve=125, forced_stop_iter=225, logged_iters=300) params={"n_estimators": 300, "learning_rate": 0.05, "num_leaves": 31, "min_child_samples": 30, "subsample": 0.8, "colsample_bytree": 0.8, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000760 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36190, number of used features: 16
+[LightGBM] [Info] Start training from score 8.241793
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000235 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36190, number of used features: 16
+[LightGBM] [Info] Start training from score 8.241793
+[2026-05-27 18:05:14] [4/66] lgbm_medium done in 6.91s (no early stopping, best_iter_from_curve=195, forced_stop_iter=295, logged_iters=800) params={"n_estimators": 800, "learning_rate": 0.03, "num_leaves": 63, "min_child_samples": 20, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000528 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36190, number of used features: 16
+[LightGBM] [Info] Start training from score 8.241793
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000629 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36190, number of used features: 16
+[LightGBM] [Info] Start training from score 8.241793
+[2026-05-27 18:05:35] [5/66] lgbm_large done in 20.98s (no early stopping, best_iter_from_curve=276, forced_stop_iter=376, logged_iters=1500) params={"n_estimators": 1500, "learning_rate": 0.02, "num_leaves": 127, "min_child_samples": 15, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[2026-05-27 18:05:37] === Horizon 6h: building features ===
+[2026-05-27 18:05:37] H=6: train rows=36,136, valid rows=4,059, test rows=7,833, features=16
+[2026-05-27 18:05:37] [6/66] ridge_lag done in 0.03s
+[2026-05-27 18:05:45] [7/66] rf_stable done in 8.35s params={"n_estimators": 800, "max_depth": 18, "min_samples_leaf": 2, "max_features": "sqrt", "n_jobs": -1, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000353 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36136, number of used features: 16
+[LightGBM] [Info] Start training from score 8.253452
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000237 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36136, number of used features: 16
+[LightGBM] [Info] Start training from score 8.253452
+[2026-05-27 18:05:47] [8/66] lgbm_small done in 1.75s (no early stopping, best_iter_from_curve=76, forced_stop_iter=176, logged_iters=300) params={"n_estimators": 300, "learning_rate": 0.05, "num_leaves": 31, "min_child_samples": 30, "subsample": 0.8, "colsample_bytree": 0.8, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001987 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36136, number of used features: 16
+[LightGBM] [Info] Start training from score 8.253452
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000230 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36136, number of used features: 16
+[LightGBM] [Info] Start training from score 8.253452
+[2026-05-27 18:05:53] [9/66] lgbm_medium done in 6.57s (no early stopping, best_iter_from_curve=166, forced_stop_iter=266, logged_iters=800) params={"n_estimators": 800, "learning_rate": 0.03, "num_leaves": 63, "min_child_samples": 20, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000563 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36136, number of used features: 16
+[LightGBM] [Info] Start training from score 8.253452
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000226 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36136, number of used features: 16
+[LightGBM] [Info] Start training from score 8.253452
+[2026-05-27 18:06:15] [10/66] lgbm_large done in 21.60s (no early stopping, best_iter_from_curve=241, forced_stop_iter=341, logged_iters=1500) params={"n_estimators": 1500, "learning_rate": 0.02, "num_leaves": 127, "min_child_samples": 15, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[2026-05-27 18:06:16] === Horizon 12h: building features ===
+[2026-05-27 18:06:16] H=12: train rows=36,093, valid rows=4,042, test rows=7,795, features=16
+[2026-05-27 18:06:16] [11/66] ridge_lag done in 0.01s
+[2026-05-27 18:06:25] [12/66] rf_stable done in 8.37s params={"n_estimators": 800, "max_depth": 18, "min_samples_leaf": 2, "max_features": "sqrt", "n_jobs": -1, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000331 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36093, number of used features: 16
+[LightGBM] [Info] Start training from score 8.254496
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000348 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36093, number of used features: 16
+[LightGBM] [Info] Start training from score 8.254496
+[2026-05-27 18:06:26] [13/66] lgbm_small done in 1.58s (no early stopping, best_iter_from_curve=52, forced_stop_iter=152, logged_iters=300) params={"n_estimators": 300, "learning_rate": 0.05, "num_leaves": 31, "min_child_samples": 30, "subsample": 0.8, "colsample_bytree": 0.8, "random_state": 42}
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001513 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36093, number of used features: 16
+[LightGBM] [Info] Start training from score 8.254496
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000312 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36093, number of used features: 16
+[LightGBM] [Info] Start training from score 8.254496
+[2026-05-27 18:06:32] [14/66] lgbm_medium done in 5.62s (no early stopping, best_iter_from_curve=86, forced_stop_iter=186, logged_iters=800) params={"n_estimators": 800, "learning_rate": 0.03, "num_leaves": 63, "min_child_samples": 20, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000368 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36093, number of used features: 16
+[LightGBM] [Info] Start training from score 8.254496
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000289 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36093, number of used features: 16
+[LightGBM] [Info] Start training from score 8.254496
+[2026-05-27 18:06:53] [15/66] lgbm_large done in 20.76s (no early stopping, best_iter_from_curve=153, forced_stop_iter=253, logged_iters=1500) params={"n_estimators": 1500, "learning_rate": 0.02, "num_leaves": 127, "min_child_samples": 15, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[2026-05-27 18:06:54] === Horizon 24h: building features ===
+[2026-05-27 18:06:54] H=24: train rows=36,016, valid rows=4,029, test rows=7,763, features=16
+[2026-05-27 18:06:54] [16/66] ridge_lag done in 0.02s
+[2026-05-27 18:07:03] [17/66] rf_stable done in 9.57s params={"n_estimators": 800, "max_depth": 18, "min_samples_leaf": 2, "max_features": "sqrt", "n_jobs": -1, "random_state": 42}
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000907 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36016, number of used features: 16
+[LightGBM] [Info] Start training from score 8.270780
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000656 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36016, number of used features: 16
+[LightGBM] [Info] Start training from score 8.270780
+[2026-05-27 18:07:05] [18/66] lgbm_small done in 1.44s (no early stopping, best_iter_from_curve=34, forced_stop_iter=134, logged_iters=300) params={"n_estimators": 300, "learning_rate": 0.05, "num_leaves": 31, "min_child_samples": 30, "subsample": 0.8, "colsample_bytree": 0.8, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000405 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36016, number of used features: 16
+[LightGBM] [Info] Start training from score 8.270780
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.000867 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36016, number of used features: 16
+[LightGBM] [Info] Start training from score 8.270780
+[2026-05-27 18:07:11] [19/66] lgbm_medium done in 6.31s (no early stopping, best_iter_from_curve=47, forced_stop_iter=147, logged_iters=800) params={"n_estimators": 800, "learning_rate": 0.03, "num_leaves": 63, "min_child_samples": 20, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000518 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36016, number of used features: 16
+[LightGBM] [Info] Start training from score 8.270780
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000307 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 36016, number of used features: 16
+[LightGBM] [Info] Start training from score 8.270780
+[2026-05-27 18:07:34] [20/66] lgbm_large done in 23.06s (no early stopping, best_iter_from_curve=58, forced_stop_iter=158, logged_iters=1500) params={"n_estimators": 1500, "learning_rate": 0.02, "num_leaves": 127, "min_child_samples": 15, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[2026-05-27 18:07:36] === Horizon 48h: building features ===
+[2026-05-27 18:07:36] H=48: train rows=35,957, valid rows=4,032, test rows=7,729, features=16
+[2026-05-27 18:07:36] [21/66] ridge_lag done in 0.03s
+[2026-05-27 18:07:50] [22/66] rf_stable done in 13.90s params={"n_estimators": 800, "max_depth": 18, "min_samples_leaf": 2, "max_features": "sqrt", "n_jobs": -1, "random_state": 42}
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.002579 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35957, number of used features: 16
+[LightGBM] [Info] Start training from score 8.292040
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000382 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35957, number of used features: 16
+[LightGBM] [Info] Start training from score 8.292040
+[2026-05-27 18:07:52] [23/66] lgbm_small done in 1.99s (no early stopping, best_iter_from_curve=1, forced_stop_iter=101, logged_iters=300) params={"n_estimators": 300, "learning_rate": 0.05, "num_leaves": 31, "min_child_samples": 30, "subsample": 0.8, "colsample_bytree": 0.8, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001445 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35957, number of used features: 16
+[LightGBM] [Info] Start training from score 8.292040
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000381 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35957, number of used features: 16
+[LightGBM] [Info] Start training from score 8.292040
+[2026-05-27 18:08:00] [24/66] lgbm_medium done in 8.02s (no early stopping, best_iter_from_curve=1, forced_stop_iter=101, logged_iters=800) params={"n_estimators": 800, "learning_rate": 0.03, "num_leaves": 63, "min_child_samples": 20, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.001023 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35957, number of used features: 16
+[LightGBM] [Info] Start training from score 8.292040
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000514 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35957, number of used features: 16
+[LightGBM] [Info] Start training from score 8.292040
+[2026-05-27 18:08:26] [25/66] lgbm_large done in 26.50s (no early stopping, best_iter_from_curve=2, forced_stop_iter=102, logged_iters=1500) params={"n_estimators": 1500, "learning_rate": 0.02, "num_leaves": 127, "min_child_samples": 15, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[2026-05-27 18:08:28] === Horizon 72h: building features ===
+[2026-05-27 18:08:28] H=72: train rows=35,927, valid rows=4,044, test rows=7,708, features=16
+[2026-05-27 18:08:28] [26/66] ridge_lag done in 0.03s
+[2026-05-27 18:08:41] [27/66] rf_stable done in 13.29s params={"n_estimators": 800, "max_depth": 18, "min_samples_leaf": 2, "max_features": "sqrt", "n_jobs": -1, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000886 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35927, number of used features: 16
+[LightGBM] [Info] Start training from score 8.288288
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000351 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35927, number of used features: 16
+[LightGBM] [Info] Start training from score 8.288288
+[2026-05-27 18:08:44] [28/66] lgbm_small done in 2.12s (no early stopping, best_iter_from_curve=1, forced_stop_iter=101, logged_iters=300) params={"n_estimators": 300, "learning_rate": 0.05, "num_leaves": 31, "min_child_samples": 30, "subsample": 0.8, "colsample_bytree": 0.8, "random_state": 42}
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.002659 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35927, number of used features: 16
+[LightGBM] [Info] Start training from score 8.288288
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000318 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35927, number of used features: 16
+[LightGBM] [Info] Start training from score 8.288288
+[2026-05-27 18:08:51] [29/66] lgbm_medium done in 7.14s (no early stopping, best_iter_from_curve=1, forced_stop_iter=101, logged_iters=800) params={"n_estimators": 800, "learning_rate": 0.03, "num_leaves": 63, "min_child_samples": 20, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[LightGBM] [Info] Auto-choosing col-wise multi-threading, the overhead of testing was 0.001854 seconds.
+You can set `force_col_wise=true` to remove the overhead.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35927, number of used features: 16
+[LightGBM] [Info] Start training from score 8.288288
+[LightGBM] [Info] Auto-choosing row-wise multi-threading, the overhead of testing was 0.000289 seconds.
+You can set `force_row_wise=true` to remove the overhead.
+And if memory is not enough, you can set `force_col_wise=true`.
+[LightGBM] [Info] Total Bins 3359
+[LightGBM] [Info] Number of data points in the train set: 35927, number of used features: 16
+[LightGBM] [Info] Start training from score 8.288288
+[2026-05-27 18:09:11] [30/66] lgbm_large done in 19.93s (no early stopping, best_iter_from_curve=1, forced_stop_iter=101, logged_iters=1500) params={"n_estimators": 1500, "learning_rate": 0.02, "num_leaves": 127, "min_child_samples": 15, "subsample": 0.9, "colsample_bytree": 0.9, "random_state": 42}
+[2026-05-27 18:09:15] All outputs written successfully.
+Phase 2 baseline experiment done.

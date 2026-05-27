@@ -1,0 +1,70 @@
+phase: phase_2_task_difficulty_and_baselines
+study_scope:
+  pollutant: PM25
+  site:
+    state_code: "36"
+    county_code: "005"
+    site_number: "0110"
+  temporal_window:
+    start: "2019-01-01 00:00:00"
+    end: "2024-12-31 23:00:00"
+    frequency: "hourly"
+
+input:
+  wide_dataset: "data/final_nyc_2015_2024/nyc_2015_2024_selected_features_hourly_aggregated_wide.parquet"
+
+pm25_preprocess:
+  negative_value_policy: "clip_to_zero"
+
+experiment:
+  target_col: "PM25"
+  horizons: [1, 6, 12, 24, 48, 72]
+  train_end: "2023-06-30 23:00:00"
+  valid_end: "2023-12-31 23:00:00"
+  test_end: "2024-12-31 23:00:00"
+  lags: [1, 2, 3, 6, 12, 24, 48, 72, 168]
+  rolling_windows: [24, 168]
+
+  # 轻量参数组（不做重型调参），重点尝试更大 n_estimators
+  rf_param_sets:
+    - name: "rf_stable"
+      n_estimators: 800
+      max_depth: 18
+      min_samples_leaf: 2
+      max_features: "sqrt"
+      n_jobs: -1
+
+  lgbm_param_sets:
+    - name: "lgbm_small"
+      n_estimators: 300
+      learning_rate: 0.05
+      num_leaves: 31
+      min_child_samples: 30
+      subsample: 0.8
+      colsample_bytree: 0.8
+    - name: "lgbm_medium"
+      n_estimators: 800
+      learning_rate: 0.03
+      num_leaves: 63
+      min_child_samples: 20
+      subsample: 0.9
+      colsample_bytree: 0.9
+    - name: "lgbm_large"
+      n_estimators: 1500
+      learning_rate: 0.02
+      num_leaves: 127
+      min_child_samples: 15
+      subsample: 0.9
+      colsample_bytree: 0.9
+
+outputs:
+  report_markdown: "reports/phase_2_baseline_results.md"
+  tables_dir: "reports/tables"
+  figures_dir: "reports/figures"
+  metrics_table: "phase_2_metrics_by_horizon.csv"
+  yearly_table: "phase_2_yearly_metrics.csv"
+  stability_table: "phase_2_stability_summary.csv"
+  rank_table: "phase_2_rank_by_horizon.csv"
+  figure_horizon_curve: "phase_2_horizon_error_curve.png"
+  figure_model_rank: "phase_2_model_rank_by_horizon.png"
+  figure_stability: "phase_2_stability_hmax_mean_std.png"
