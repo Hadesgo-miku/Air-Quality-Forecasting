@@ -1,0 +1,51 @@
+phase: phase_1_drift_analysis
+study_scope:
+  pollutant: PM25
+  site:
+    state_code: "36"
+    county_code: "005"
+    site_number: "0110"
+  temporal_window:
+    start: "2019-01-01 00:00:00"
+    end: "2024-12-31 23:00:00"
+    frequency: "hourly"
+
+input:
+  wide_dataset: "data/final_nyc_2015_2024/nyc_2015_2024_selected_features_hourly_aggregated_wide.parquet"
+
+pm25_preprocess:
+  negative_value_policy: "clip_to_zero"
+  note: "For 2019-2024, still enforce non-negative physical constraint before Phase 1 statistics."
+
+thresholds:
+  fixed:
+    - 35.0
+  quantile_based:
+    - 0.90
+    - 0.95
+
+reference_period_for_drift:
+  mode: "fixed_years"
+  years: [2019, 2020]
+
+outputs:
+  report_markdown: "reports/phase_1_drift_analysis.md"
+  tables_dir: "reports/tables"
+  figures_dir: "reports/figures"
+  required_tables:
+    - "yearly_summary.csv"
+    - "monthly_summary.csv"
+    - "drift_metrics_by_year.csv"
+    - "missingness_by_year_month.csv"
+    - "extreme_events_summary.csv"
+  required_figures:
+    - "phase_1_full_series_pm25.png"
+    - "phase_1_yearly_distribution_boxplot.png"
+    - "phase_1_yearly_mean_median_p95.png"
+    - "phase_1_year_month_heatmap.png"
+    - "phase_1_year_hour_profile.png"
+    - "phase_1_high_pm_ratio_by_year.png"
+    - "phase_1_drift_metrics_by_year.png"
+    - "phase_1_acf_comparison.png"
+    - "phase_1_stl_components.png"
+    - "phase_1_missingness_heatmap.png"
